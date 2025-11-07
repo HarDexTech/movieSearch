@@ -1,0 +1,82 @@
+/* CSS Boilerplate */
+:root {
+    --bgColor: rgb(50, 65, 52);
+    --text: white;
+    --peripherals: ;
+    --defWidth: 200px;
+    --transitions: 0.3s ease-in-out;
+    --borderRadius: calc(infinity * 1px);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow: hidden;
+    flex-direction: column;
+}
+.contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-direction: column;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
+input, button{
+    border: none;
+    background: var(--bgColor);
+}
+input{
+    padding: calc(var(--defWidth)/10);
+    font-size: 16px;
+    border-radius: var(--borderRadius);
+    width: 400px;
+    transition: var(--transitions);
+    color: var(--text);
+}
+input::placeholder{
+    color: var(--text);
+}
+button{
+    padding: calc(var(--defWidth)/10);
+    font-size: 16px;
+    color: var(--text);
+    cursor: pointer;
+    border-radius: var(--borderRadius);
+    transition: all var(--transitions);
+    width: 150px;
+}
+button:hover{
+    filter: opacity(0.7);
+}
+button:active{
+    transform: scale(0.9);
+}
+.container{
+    width: 90vw;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: var(--borderRadius);
+    box-shadow: 0 4px 8px var(--bgColor);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+#results{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
