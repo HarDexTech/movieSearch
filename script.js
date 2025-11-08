@@ -23,13 +23,14 @@ const getMovie = function () {
                     `
                 }
                 resultContainer.innerHTML = `<div class="movieData">
-                Title: ${data.Title}<br>
-                Plot: ${data.Plot}<br>
-                Rating: ${data.imdbRating}<br>
-                Actors: ${data.Actors}<br>
-                Year: ${data.Year}<br>
-                Genre: ${data.Genre}<br>
-                ${hasSeasons}
+                <div>Title: ${data.Title}</div>
+                <div>Plot: ${data.Plot}</div>
+                <div>Rating: ${data.imdbRating}</div>
+                <div>Actors: ${data.Actors}</div>
+                <div>Year: ${data.Year}</div>
+                <div>Genre: ${data.Genre}</div>
+                <div>${hasSeasons}</div>
+                <div><img src="${data.Poster}" alt="Movie Poster"></div>             
                 </div>`;
             }
             else {
