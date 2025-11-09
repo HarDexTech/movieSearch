@@ -6,6 +6,12 @@ const apikey = "f4c009ac";
 const getMovie = function () {
 
     const movieInput = document.getElementById('searchInput').value;
+    if (movieInput.length === 0) {
+        resultContainer.innerHTML = `<h2>
+        Please enter a movie name
+       </h2>`;
+        return;
+    }
     fetch(`http://www.omdbapi.com/?apikey=${apikey}&t=${movieInput}`)
         .then(response => response.json())
         .then(data => {
@@ -40,4 +46,12 @@ const getMovie = function () {
                 console.log(data)
             }
         })
+}
+
+document.querySelector('body').addEventListener('keydown', enterSearch);
+
+function enterSearch(e) {
+    if (e.key === 'Enter') {
+        getMovie();
+    }
 }
