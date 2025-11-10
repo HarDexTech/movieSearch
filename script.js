@@ -12,7 +12,7 @@ const getMovie = function () {
        </h2>`;
         return;
     }
-    fetch(`http://www.omdbapi.com/?apikey=${apikey}&t=${movieInput}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apikey}&t=${movieInput}`)
         .then(response => response.json())
         .then(data => {
             if (data.Response === "True") {
