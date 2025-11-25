@@ -2,7 +2,7 @@
 //dom elements
 const searchBtn = document.getElementById("searchButton");
 const resultContainer = document.getElementById("results");
-const apikey = APIKEY.apiKey;
+const apikey = "40f44ef6";
 
 const getMovie = function () {
   const movieInput = document.getElementById("searchInput").value; //get input
